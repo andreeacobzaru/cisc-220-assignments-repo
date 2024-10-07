@@ -1,0 +1,47 @@
+0.
+pwd
+
+1.
+cd /Users/andreeac/Desktop/queen\'s/year-2/cisc-220/assignments/CISC220_A1/marking/A1/"Pierce Deere"
+
+2.
+cd marking/A1/Luke_Warme
+
+3.
+cat A1/Kareem_O\'Weet/A1answers.txt
+
+4.
+ls . ..
+
+5.
+cd ../../../../
+
+6.
+ls -1 */[Aa]*
+
+7.
+ls -1 */*[02-9]*
+
+8.
+ls -lShd */*
+
+9.
+ls -1 -A */.late+[+x]
+
+10.
+chmod 750 hello.sh
+
+11.
+chmod u=rw,g=r,o=r *.png
+
+12.
+ls */A1* | wc -l
+
+13.
+cut -f 2 CISC220.cl | sort | head -n 5
+
+14.
+cut -f 2 CISC220.cl | sort | cut -d ',' -f 1
+
+15.
+cut -f 2 CISC220.cl | cut -d ',' -f 2 | sort | uniq -c | sort -nr | head -n 1

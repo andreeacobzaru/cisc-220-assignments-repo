@@ -28,6 +28,7 @@ elif [[ !(-r $filename) ]]; then
 fi
 
 year="$1"
+next_year=$(( year + 1 ))
 mapfile -t letter_grades < <(cut -f 3 "${filename}")
 mapfile -t terms < <(cut -f 2 "${filename}")
 
@@ -35,7 +36,7 @@ float_string="("
 total=$(( 0 ))
 for (( i=0; i < "${#terms[@]}"; i++ )); do
     term="${terms[i]}"
-    if [[ "${term}" == "$year"* ]]; then
+    if [[ "${term}" == "${year} F" || "${term}" == "${next_year} W" || "${term}" == "${next_year} S" ]]; then
         letter=${letter_grades[i]}
         number=$( letter2gp "${letter}" )
         if [[ ${number} != -1 ]]; then
